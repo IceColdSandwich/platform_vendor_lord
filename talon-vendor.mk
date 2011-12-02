@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Google Apps
+$(call inherit-product-if-exists, vendor/google/google-vendor.mk)
+
 # Common Files
 PRODUCT_COPY_FILES += \
 	vendor/talon/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip \
