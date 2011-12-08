@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product-if-exists, vendor/talon/products/common_versions.mk)
+# Common Talon products
+$(call inherit-product-if-exists, vendor/talon/products/common.mk)
 
 # Google Apps
 $(call inherit-product-if-exists, vendor/google/google-vendor.mk)
