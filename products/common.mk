@@ -51,4 +51,4 @@ PRODUCT_COPY_FILES += \
     vendor/talon/prebuilt/common/xbin/powertop:system/xbin/powertop \
     vendor/talon/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
 
-
+PRODUCT_PACKAGE_OVERLAYS += vendor/talon/overlay/common
