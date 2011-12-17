@@ -1,1 +1,1 @@
-add_lunch_combo talon_ace-eng
+add_lunch_combo lord_ace-eng

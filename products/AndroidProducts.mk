@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/talon_ace.mk
+    $(LOCAL_DIR)/lord_ace.mk

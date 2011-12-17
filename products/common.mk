@@ -1,6 +1,6 @@
 # Generic Talon product
-PRODUCT_NAME := talon
-PRODUCT_BRAND := talon
+PRODUCT_NAME := lord
+PRODUCT_BRAND := lord
 PRODUCT_DEVICE := generic
 
 # Include GSM stuff
