@@ -6,5 +6,5 @@ lunch lord_ace-eng
 export USE_CCACHE=1
 export CCACHE_DIR=/home/lord/.ccache
 prebuilt/linux-x86/ccache/ccache -M 40G
-#make -j10 lord
-make CC=gcc-4.4 CXX=g++-4.4 -j10 lord
+#make -j8 lord
+make CC=gcc-4.4 CXX=g++-4.4 -j8 lord
