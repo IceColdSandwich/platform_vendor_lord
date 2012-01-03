@@ -9,7 +9,7 @@ $(call inherit-product, vendor/talon/products/gsm.mk)
 PRODUCT_PACKAGES += \
     Superuser \
     Mms \
-    Camera \
+    Camera
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
