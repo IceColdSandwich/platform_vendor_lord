@@ -1,4 +1,3 @@
-./vendorsetup.sh
 export USE_CCACHE=1
 export CCACHE_DIR=/home/lord/.ccache
 prebuilt/linux-x86/ccache/ccache -M 40G
