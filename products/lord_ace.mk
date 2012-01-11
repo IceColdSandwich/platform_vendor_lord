@@ -1,5 +1,5 @@
 # Inherit AOSP device configuration for ace
-$(call inherit-product, device/htc/ace/cm.mk)
+$(call inherit-product, device/htc/ace/full_ace.mk)
 
 # Inherit some common stuff.
 $(call inherit-product, vendor/lord/products/common.mk)
