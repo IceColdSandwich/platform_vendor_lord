@@ -8,8 +8,8 @@ $(call inherit-product, vendor/lord/products/common.mk)
 $(call inherit-product-if-exists, vendor/google/google-vendor.mk)
 
 # Common Files
-#PRODUCT_COPY_FILES += \
-#	vendor/talon/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip \
+PRODUCT_COPY_FILES += \
+	vendor/lord/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip \
 
 #
 # Setup device specific product configuration.
