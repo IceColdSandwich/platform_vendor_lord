@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     vendor/lord/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/lord/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/lord/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
+    vendor/lord/prebuilt/common/etc/init.d/99complete:system/etc/init.d/99complete \
     vendor/lord/prebuilt/common/bin/fix_permissions:system/bin/fix_permissions \
     vendor/lord/prebuilt/common/bin/sysinit:system/bin/sysinit \
     vendor/lord/prebuilt/common/bin/verify_cache_partition_size.sh:system/bin/verify_cache_partition_size.sh \
