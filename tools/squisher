@@ -141,7 +141,7 @@ rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
 if [ -z "$LORD_NIGHTLY" ]; then
-	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*LC-ICS-//p' $REPACK/ota/system/build.prop`
+	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*IceColdSandwich-//p' $REPACK/ota/system/build.prop`
 	: ${MODVERSION:=nightly}
 	OUTFILE=$OUT/IceColdSandwich-$MODVERSION-signed.zip
 else
