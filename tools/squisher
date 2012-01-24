@@ -143,7 +143,7 @@ rm -rf $REPACK/ota/recovery
 if [ -z "$LORD_NIGHTLY" ]; then
 	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*LC-ICS-//p' $REPACK/ota/system/build.prop`
 	: ${MODVERSION:=nightly}
-	OUTFILE=$OUT/update-LC-ICS-$MODVERSION-signed.zip
+	OUTFILE=$OUT/IceColdSandwich-$MODVERSION-signed.zip
 else
 	OUTFILE=$OUT/update-squished.zip
 fi
