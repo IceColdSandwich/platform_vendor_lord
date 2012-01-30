@@ -1,10 +1,10 @@
 export USE_CCACHE=1
-export CCACHE_DIR=/home/lord/.ccache
+export CCACHE_DIR=/$HOME/.ccache
 prebuilt/linux-x86/ccache/ccache -M 40G
 source build/envsetup.sh
 lunch htc_ace-eng
 export USE_CCACHE=1
-export CCACHE_DIR=/home/lord/.ccache
+export CCACHE_DIR=/$HOME/.ccache
 prebuilt/linux-x86/ccache/ccache -M 40G
 #make -j6 lord
 
