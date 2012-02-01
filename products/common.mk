@@ -42,4 +42,5 @@ PRODUCT_COPY_FILES += \
     vendor/lord/prebuilt/common/xbin/htop:system/xbin/htop \
     vendor/lord/prebuilt/common/xbin/irssi:system/xbin/irssi \
     vendor/lord/prebuilt/common/xbin/powertop:system/xbin/powertop \
-    vendor/lord/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
+    vendor/lord/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh \
+    vendor/lord/prebuilt/common/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh
