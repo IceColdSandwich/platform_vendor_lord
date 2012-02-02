@@ -44,4 +44,4 @@ PRODUCT_COPY_FILES += \
     vendor/lord/prebuilt/common/xbin/powertop:system/xbin/powertop \
     vendor/lord/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh \
     vendor/lord/prebuilt/common/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh \
-    vendor/lord/prebuilt/setup/overlay:setup/overlay
+    vendor/lord/prebuilt/setup/overlay:system/setup/overlay
