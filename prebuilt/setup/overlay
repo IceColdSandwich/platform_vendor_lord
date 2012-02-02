@@ -1,0 +1,78 @@
+#!/system/bin/sh
+#
+# overlay script - by AlienMind
+# 
+# Intended to be run at flash time, this script
+# will overlay some folders from sdcard to system and/or data
+# partitions
+#
+# This way ROM users can customize their flashes to add
+# custom apps, animations or whatever from the very beginning
+#
+# This is extracted from icetool overlay option,
+# available on https://github.com/alienmind-org/BlackICE/blob/master/system/bin/icetool
+#
+OVERLAY_DIR=/sdcard/overlay
+
+# FIXME Device dependent paths
+# These works only on DesireHD / Inspire4G
+SYSTEM_DEV=/dev/block/mmcblk0p25
+DATA_DEV=/dev/block/mmcblk0p26
+
+###
+#
+# Overlay - Copy custom content from sdcard
+Overlay() {
+  local DST="$1"
+  local SRC="$2"
+
+  if [ "$DST" = "/system" ]; then
+    DEV=/dev/block/mmcblk0p25
+  elif [ "$DST" = "/data" ]; then
+    DEV=/dev/block/mmcblk0p26
+  else
+    die "overlay: Invalid destination $DST"
+  fi
+
+  if [ ! -d "$SRC" ]; then
+    die "overlay: Invalid source $SRC"
+  fi
+
+  # We try both methods for mounting
+  mount $DEV $DST &>/dev/null
+  mount -o remount,rw $DEV $DST
+
+  # Copy
+  cp -av $SRC/* $DST/
+
+  #
+  #umount $DST
+}
+
+
+# Fix possible permission issues with overlayed files
+# These are only common fixes, some other custom fix may be added
+FixPerms() {
+  chmod 644 /system/app/* /data/app/*
+  chmod 755 /system/etc/init.d/*
+}
+
+########
+
+# Test if some folders are ready to be copied over
+[ -d "$OVERLAY_DIR/system" ] && \
+  Overlay /system "$OVERLAY_DIR/system"
+  
+[ -d "$OVERLAY_DIR/data" ] && \
+  Overlay /data "$OVERLAY_DIR/data"
+
+
+# Custom permission fix
+if [ -f "$OVERLAY_DIR/fixperms.sh" ]; then
+  sh "$OVERLAY_DIR"/fixperms.sh 
+else
+  # Fix common known permission problems
+  FixPerms
+fi
+
+exit 0
