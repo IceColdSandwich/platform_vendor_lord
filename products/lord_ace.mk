@@ -9,7 +9,7 @@ $(call inherit-product-if-exists, vendor/google/google-vendor.mk)
 
 # Common Files
 PRODUCT_COPY_FILES += \
-	vendor/lord/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip \
+	vendor/lord/prebuilt/media/bootanimation_new.zip:system/media/bootanimation.zip \
 
 #
 # Setup device specific product configuration.
