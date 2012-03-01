@@ -1,1 +1,1 @@
-add_lunch_combo htc_ace-eng
+add_lunch_combo htc_ace-userdebug
