@@ -34,7 +34,6 @@ PRODUCT_COPY_FILES += \
     vendor/lord/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/lord/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/lord/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/lord/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
     vendor/lord/prebuilt/common/etc/init.d/99complete:system/etc/init.d/99complete \
     vendor/lord/prebuilt/common/bin/fix_permissions:system/bin/fix_permissions \
     vendor/lord/prebuilt/common/bin/sysinit:system/bin/sysinit \
@@ -45,3 +44,29 @@ PRODUCT_COPY_FILES += \
     vendor/lord/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh \
     vendor/lord/prebuilt/common/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh \
     vendor/lord/prebuilt/setup/overlay:system/setup/overlay
+
+# InitD startup tweaks in ROMControl
+PRODUCT_COPY_FILES += \
+    vendor/lord/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
+    vendor/lord/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
+    vendor/lord/prebuilt/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
+    vendor/lord/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
+    vendor/lord/prebuilt/common/etc/init.d/05freemem:system/etc/init.d/05freemem \
+    vendor/lord/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
+    vendor/lord/prebuilt/common/etc/init.d/07fixperms:system/etc/init.d/07fixperms \
+    vendor/lord/prebuilt/common/etc/init.d/09cron:system/etc/init.d/09cron \
+    vendor/lord/prebuilt/common/etc/init.d/10sdboost:system/etc/init.d/10sdboost \
+    vendor/lord/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
+    vendor/lord/prebuilt/common/etc/init_trigger.enabled:system/etc/init_trigger.enabled \
+    vendor/lord/prebuilt/common/etc/liberty.bsh:system/etc/liberty.bsh \
+    vendor/lord/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
+    
+# Cron
+PRODUCT_COPY_FILES += \
+    vendor/lord/prebuilt/common/etc/cron/cron.conf:system/etc/cron/cron.conf \
+    vendor/lord/prebuilt/common/etc/cron/cron.hourly/00drop_caches:system/etc/cron/cron.hourly/00drop_caches \
+    vendor/lord/prebuilt/common/etc/cron/cron.daily/00drop_caches:system/etc/cron/cron.daily/00drop_caches \
+    vendor/lord/prebuilt/common/etc/cron/cron.weekly/00drop_caches:system/etc/cron/cron.weekly/00drop_caches \
+    vendor/lord/prebuilt/common/etc/cron/cron.hourly/01clear_cache:system/etc/cron/cron.hourly/01clear_cache \
+    vendor/lord/prebuilt/common/etc/cron/cron.daily/01clear_cache:system/etc/cron/cron.daily/01clear_cache \
+    vendor/lord/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache 
