@@ -66,6 +66,11 @@ FixPerms() {
 [ -d "$OVERLAY_DIR/data" ] && \
   Overlay /data "$OVERLAY_DIR/data"
 
+# Add possible .tar.gz overlays
+# It is done now that we have /system and /data mounted
+for i in $OVERLAY_DIR/*.tar.gz $OVERLAY_DIR/*.tgz ; do
+   tar -C / -xzvf $i
+done
 
 # Custom permission fix
 if [ -f "$OVERLAY_DIR/fixperms.sh" ]; then
