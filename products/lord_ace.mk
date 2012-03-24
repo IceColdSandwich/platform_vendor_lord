@@ -7,6 +7,9 @@ $(call inherit-product, vendor/lord/products/common.mk)
 # Google Apps
 $(call inherit-product-if-exists, vendor/google/google-vendor.mk)
 
+# Inherit proprietary qcom stuff.
+$(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
+
 # Common Files
 PRODUCT_COPY_FILES += \
 	vendor/lord/prebuilt/media/bootanimation_johnblundon.zip:system/media/bootanimation.zip \
