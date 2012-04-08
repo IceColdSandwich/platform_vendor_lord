@@ -1,0 +1,8 @@
+#!/system/bin/sh
+bprop=/system/build.prop
+play=0
+if [ "$play" != "" ]; then
+        stagefright -a -o /system/media/android_audio.mp3
+fi
+exit 0
+

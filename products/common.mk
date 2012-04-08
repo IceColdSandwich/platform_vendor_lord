@@ -69,4 +69,8 @@ PRODUCT_COPY_FILES += \
     vendor/lord/prebuilt/common/etc/cron/cron.weekly/00drop_caches:system/etc/cron/cron.weekly/00drop_caches \
     vendor/lord/prebuilt/common/etc/cron/cron.hourly/01clear_cache:system/etc/cron/cron.hourly/01clear_cache \
     vendor/lord/prebuilt/common/etc/cron/cron.daily/01clear_cache:system/etc/cron/cron.daily/01clear_cache \
-    vendor/lord/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache 
+    vendor/lord/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache
+
+#Boot sound
+PRODUCT_COPY_FILES += \
+    vendor/lord/prebuilt/common/bin/bootsound:system/bin/bootsound
