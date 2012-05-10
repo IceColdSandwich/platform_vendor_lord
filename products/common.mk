@@ -6,6 +6,9 @@ PRODUCT_DEVICE := generic
 # Include GSM stuff
 $(call inherit-product, vendor/lord/products/gsm.mk)
 
+# T-Mobile theme engine
+include vendor/lord/configs/themes_common.mk
+
 PRODUCT_PACKAGES += \
     Superuser \
     Mms \
