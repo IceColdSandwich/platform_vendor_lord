@@ -2,6 +2,7 @@
 PRODUCT_PACKAGES += \
        ThemeManager \
        ThemeChooser \
+       BlackICS \
        com.tmobile.themes
 
 PRODUCT_COPY_FILES += \
