@@ -34,6 +34,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 
 PRODUCT_COPY_FILES += \
+    vendor/lord/prebuilt/common/etc/audio_effects.conf:system/etc/audio_effects.conf \
     vendor/lord/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/lord/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/lord/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
