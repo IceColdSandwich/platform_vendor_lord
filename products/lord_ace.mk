@@ -12,7 +12,7 @@ $(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
 
 # Common Files
 PRODUCT_COPY_FILES += \
-	vendor/lord/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip \
+	vendor/lord/prebuilt/media/bootanimation_Kenny.zip:system/media/bootanimation.zip \
 
 #
 # Setup device specific product configuration.
