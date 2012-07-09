@@ -5,3 +5,21 @@
 busybox mount -o remount,noatime,barrier=0,nobh /system
 busybox mount -o remount,noatime /data
 busybox mount -o remount,noatime,barrier=0,nobh /cache
+
+echo "0" > $j/queue/rotational; 
+
+# kernel settings
+echo "600000" > /proc/sys/kernel/sched_latency_ns
+echo "400000" > /proc/sys/kernel/sched_min_granularity_ns
+echo "800000" > /proc/sys/kernel/sched_wakeup_granularity_ns
+echo "28" > /proc/sys/kernel/sched_nr_migrate
+echo "300000" > /proc/sys/kernel/sched_migration_cost
+
+# read ahead
+echo "sio" > /sys/block/mmcblk0/queue/scheduler
+echo "2048" > /sys/block/mmcblk0/queue/read_ahead_kb
+echo "deadline" > /sys/block/mmcblk1/queue/scheduler
+echo "4096" > /sys/block/mmcblk1/queue/read_ahead_kb
+
+# vm settings
+echo "4096" > /proc/sys/vm/min_free_kbytes
